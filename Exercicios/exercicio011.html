@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Média do aluno v2.0</h1>
+    <button onclick="calcular()">Calcular Média</button>
+    <div id="res"></div>
+
+    <script>
+        var resultado = document.getElementById('res')
+        resultado.innerHTML = 'O resultado vai aparecer aqui...'
+
+        function calcular() {
+            let nome = prompt('Qual é o nome do aluno?') // recebe nome
+            let nota1 = Number(prompt(`Qual foi a primeira nota de ${nome}?`)) // recebe nota1
+            let nota2 = Number(prompt(`Além de ${nota1}, qual foi a outra nota de ${nome}?`)) // recebe nota2
+            let media = (nota1 + nota2) / 2
+
+            resultado.innerHTML = `<p>Calculando a média final de ${nome}.</p>`
+            resultado.innerHTML += `<p>As notas obtidas foram <mark>${nota1} e ${nota2}</mark>.</p>`
+            resultado.innerHTML += `<p>A média final será <mark>${media}</mark>.</p>`
+
+            if(media <= 6) {
+                resultado.innerHTML += `A mensagem que temos é: Estude um pouco mais!`
+            }else {
+                resultado.innerHTML += `A mensagem que temos é: Meus parabéns!`
+            }
+
+        }
+    </script>
+</body>
+</html>

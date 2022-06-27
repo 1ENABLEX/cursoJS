@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProblemaGowther</title>
+</head>
+<body>
+
+    <p>Insira os valores:</p>
+    <input type="number" name="" id="Valor1">
+    <input type="number" name="" id="Valor2">
+    <button onclick="calculaCombustivel()">calcular</button>
+    <div id="res">
+
+    </div>
+
+<script>
+    let resultado = document.getElementById('res')
+    function calculaCombustivel(){
+        let tempoGasto = Number(document.getElementById('Valor1').value)
+        let velMedia = Number(document.getElementById('Valor2').value)
+        let formula = parseFloat(tempoGasto * velMedia / 12)
+        let valorArredondado = (formula.toFixed(3))
+        console.log(valorArredondado)
+    }
+
+
+</script>
+
+</body>
+</html>

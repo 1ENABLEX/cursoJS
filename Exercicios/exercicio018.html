@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tente adivinhar meu número</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('https://cachorrolegal.com/wp-content/uploads/2021/10/foto-de-cachorro-fofo.webp');
+
+            background-size: 100%;
+            height: 100vh;
+        }
+        .conteudo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 5px;
+        }
+
+        button {
+            border: none;
+            margin: 5px;
+            font-size: 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: rgb(216, 255, 214);
+        }
+
+        div{
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="conteudo">
+        <h1>Tente adivinhar meu número</h1>
+            <button id="concluido" onclick="adivinhe()">Tentar adivinhar</button>
+            <button onclick="reload()">Tente novamente</button>
+        <div id="res">Já pensei em um valor entre 1 e 100...</div>
+    </div>
+
+
+
+    <script>
+        var resposta = Math.floor(Math.random() * 100) + 1
+        function adivinhe(){
+            var chute = Number(prompt('Qual é o seu palpite?'))
+            
+            var res = document.getElementById('res')
+            if(chute == resposta){
+                res.innerHTML = `PARABÉNS! Você acertou! Eu tinha sorteado o valor ${resposta}!`
+                document.getElementById("concluido").style.display = "none";
+            }else if(chute > resposta){
+                res.innerHTML += `<p>Você falou ${chute}. Meu número é <b>MENOR!</b></p>`
+            }else if(chute < resposta){
+                res.innerHTML += `<p>Você falou ${chute}. Meu número é <b>MAIOR!</b></p>`
+            }else if(chute < 0 || isNaN(chute)){
+                alert('Digite um numero valido')
+            }
+            console.log(resposta)
+        }
+        function reload() {
+            document.location.reload(true);
+        }
+
+
+    </script>
+</body>
+</html>

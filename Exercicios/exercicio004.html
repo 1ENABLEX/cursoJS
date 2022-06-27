@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: 12pt Arial;
+        }
+        button {
+            font-size: 12pt;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com Dados v2.0</h1>
+    <button onclick="inicio()">Clique para começar</button>
+     <!--Chamando a função quando clicko no botão!-->
+    <section id="resultado">
+        <!--Id que será usado no JS atraves do getElementById!-->
+        <p>Aqui vai aparecer o resultado... </p>
+    </section>
+
+    <script>
+        function inicio() {
+            let nome = prompt('Qual é o seu nome?')
+            // salvando a resposta do alerta em uma variavel
+            let res  = document.getElementById('resultado')
+            //Definindo atraves do getElementById no container "Resultado" do html
+
+            res.innerHTML = `<p>Olá, <strong>${nome}!</strong> É um grande prazer te conhecer!🖖</p>` 
+            // innerhtml imprime na tela aonde a variavel foi definida
+        }
+    </script>
+</body>
+</html>

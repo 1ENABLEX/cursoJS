@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        var nome = window.prompt('Qual é seu nome?') // Guardando a variavel nome que será inserida no window.prompt!
+        document.writeln(`<h2>Olá, ${nome}. Seu nome tem ${nome.length} letras.</h2><br>`) // length é a quantidade de caracteres
+        document.writeln(`Seu nome em maiusculas é ${nome.toUpperCase()}<br>`) //toUpperCase é maiusculo
+        document.write(`Seu nome em minusculas é ${nome.toLowerCase()}<br>`) // toLowerCase é minusculo
+
+        //
+        var sexo = window.prompt('Qual é o seu genero?') // guardando a variavel inserida no window.prompt
+        document.writeln(`${nome} o seu genero é: ${sexo.toUpperCase()} correto?<br>`) // escrevendo na tela as variaveis nome e sexo.toUpperCase() que o transforma em letras maiusculas!
+        
+        
+        var tarefas = window.prompt('Escreva agora 3 tarefas para realizar hoje!') // guardando a variavel tarefas
+        document.write(`Suas tarefas são: ${tarefas}`) // Imprimindo na tela as tarefas armazenadas na variavel tarefas
+
+    </script>
+</body>
+</html>

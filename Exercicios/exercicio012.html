@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>É par ou é ímpar?</title>
+</head>
+<body>
+    <h1>É par ou é ímpar?</h1>
+
+    <button onclick="comparar()">Clique para iniciar</button>
+
+    <div id="res"></div>
+
+
+    <script>
+        var resultado = window.document.getElementById('res')
+        resultado.innerHTML = `O resultado vai aparecer aqui...`
+
+        function comparar(){
+            var numero = Number(prompt('Digite um número: '))
+            if(numero % 2) {
+                resultado.innerHTML = `O número ${numero} que foi digitado é ÍMPAR!`
+            }else {
+                resultado.innerHTML = `O número ${numero} que foi digitado é PAR!`
+            }
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Contador de cliques</h1>
+    <button id="click" onclick="clickar()">Clique em mim</button>
+    <button id="zerar" onclick="zerar()">Zerar o contador</button>
+    <p id="resultado">O contador está com 0 cliques.</p>
+
+
+    <script>
+        var contador = 0 // recebe o valor 0
+        var resultado = document.getElementById('resultado')  // recebe o valor do elemento resultado
+
+
+        // função de contagem
+        function clickar(){
+            contador++ // é a mesma coisa que contador = contador + 1
+            resultado.innerHTML = `<p>O contador está com <mark>${contador}</mark> cliques.</p>` // escreve no elemento html
+        }
+        
+        // função para resetar
+        function zerar() {
+            contador = 0 // zera a contagem
+            resultado.innerHTML = null // imprime na tela
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Vários cálculos em JS</h1>
+    <button onclick="pegarNumero()">Clique para calcular</button>
+    <div class="variosCalculos">O resultado vai aparecer aqui...</div>
+
+    <script>
+        function pegarNumero() {
+            var numero = prompt('Digite um número:');
+            var calculos = document.querySelector('.variosCalculos');
+            var absoluto = (numero < 0 ? numero * -1 : numero);
+            var inteira = parseInt(numero);
+
+
+            var maisProximo = parseInt(numero);
+            
+            
+            var rQuadrado = Math.sqrt(numero);
+            var rCubica = Math.cbrt(numero);
+            var elevadoDois = numero**2;
+            var elevadoTerceira = numero**3;
+
+            calculos.innerHTML = `O número a ser analisado aqui será o <b>${numero}</b> <br> <hr>`
+            calculos.innerHTML += `O seu valor absoluto é ${absoluto}<br>`
+            calculos.innerHTML += `A sua parte inteira é ${inteira}<br>`
+            calculos.innerHTML += `O valor inteiro mais próximo é ${maisProximo}<br>`
+            calculos.innerHTML += `A sua raiz quadrada é  ${rQuadrado}<br>`
+            calculos.innerHTML += `A sua raiz cúbica é  ${rCubica}<br>`
+            calculos.innerHTML += `O valor de ${numero}² é ${elevadoDois}<br>`
+            calculos.innerHTML += `O valor de ${numero}³ é ${elevadoTerceira}<br>`
+
+        }; 
+
+        
+    </script>
+</body>
+</html>

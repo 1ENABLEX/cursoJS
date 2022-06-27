@@ -1,0 +1,34 @@
+O que é dom = Document Object Model
+
+Parent = pai 
+Child = Filho
+
+window.document.write('Oi')
+
+Write - Ira imprimir na tela
+
+Selecionando 
+
+por Marca - getElementByTagName()
+
+por ID - getElementByID()
+
+por nome - getElementsByName()
+
+por classe - getElementsByClassName()
+
+por seletor - querySelector(), querySelectorAll()
+
+
+
+// EVENTOS DOM
+
+mouseenter - mousemove
+mouse down - mouseup
+click      - mouseout
+
+// Funções
+
+function ação(parametros){
+    bloco
+}

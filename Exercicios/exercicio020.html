@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra a estação do ano</title>
+</head>
+<body>
+    <h1>Descubra a estação do ano</h1>
+
+    <button onclick="estação()">Informe o mês aqui</button>
+
+    <div id="res">Clique no botão acima para informar o mês.</div>
+
+
+    <script>
+        var estacao
+        var resultado = document.getElementById('res')
+        function estação() {
+            var mes = prompt('Digite o mês em extenso (ex: Setembro)').toLowerCase()
+            switch(mes){
+                case 'janeiro':
+                   estacao = 'INVERNO'
+                   resultado.innerHTML = `No mês de <mark>${mes}</mark>, estamos na estação <mark><b>${estacao}</b></mark>`
+                   break
+                case 'fevereiro':
+                   estacao = 'INVERNO'
+                   resultado.innerHTML = `No mês de <mark>${mes}</mark>, estamos na estação <mark><b>${estacao}</b></mark>`
+                break
+                case 'janeiro':
+                   estacao = 'INVERNO'
+                   resultado.innerHTML = `No mês de <mark>${mes}</mark>, estamos na estação <mark><b>${estacao}</b></mark>`
+                   break
+                case 'março':
+                   estacao = 'INVERNO'
+                   resultado.innerHTML = `No mês de <mark>${mes}</mark>, estamos na estação <mark><b>${estacao}</b></mark>`
+                   break
+                   case 'abril':
+                   estacao = 'PRIMAVERA'
+                   resultado.innerHTML = `No mês de <mark>${mes}</mark>, estamos na estação <mark><b>${estacao}</b></mark>`
+                   break
+                case 'maio':
+                   estacao = 'PRIMAVERA'
+                   resultado.innerHTML = `No mês de <mark>${mes}</mark>, estamos na estação <mark><b>${estacao}</b></mark>`
+                break
+                case 'junho':
+                   estacao = 'PRIMAVERA'
+                   resultado.innerHTML = `No mês de <mark>${mes}</mark>, estamos na estação <mark><b>${estacao}</b></mark>`
+                   break
+                case 'julho':
+                   estacao = 'VERÃO'
+                   resultado.innerHTML = `No mês de <mark>${mes}</mark>, estamos na estação <mark><b>${estacao}</b></mark>`
+                   break
+                   case 'agosto':
+                   estacao = 'VERÃO'
+                   resultado.innerHTML = `No mês de <mark>${mes}</mark>, estamos na estação <mark><b>${estacao}</b></mark>`
+                   break
+                case 'setembro':
+                   estacao = 'VERÃO'
+                   resultado.innerHTML = `No mês de <mark>${mes}</mark>, estamos na estação <mark><b>${estacao}</b></mark>`
+                break
+                case 'outubro':
+                   estacao = 'OUTONO'
+                   resultado.innerHTML = `No mês de <mark>${mes}</mark>, estamos na estação <mark><b>${estacao}</b></mark>`
+                   break
+                case 'novembro':
+                   estacao = 'OUTONO'
+                   resultado.innerHTML = `No mês de <mark>${mes}</mark>, estamos na estação <mark><b>${estacao}</b></mark>`
+                   break
+                case 'dezembro':
+                   estacao = 'OUTONO'
+                   resultado.innerHTML = `No mês de <mark>${mes}</mark>, estamos na estação <mark><b>${estacao}</b></mark>`
+                   break
+                default:
+                   estacao = 'OUTONO'
+                   resultado.innerHTML = `No mês de <mark>${mes}</mark>, estamos na estação <mark><b>INDEFINIDA</b></mark>`
+                   break
+                
+            }
+        }
+
+        /*
+        function estação() { // Sim, é possível usar acentuação
+    let mês = prompt('Digite o mês em extenso (ex: Setembro)')
+    let saída = document.querySelector('section#saida')
+    let estação
+    switch (mês.toUpperCase()) { // O método toUpperCase() transforma todas as letras de uma string para maiúsculas
+        case 'JANEIRO': case 'FEVEREIRO': case 'MARÇO': // Podemos testar múltiplos casos em uma mesma linha, desse jeito
+            estação = 'INVERNO'
+            break // Nunca se esqueça do break!!!
+        case 'ABRIL': case 'MAIO': case 'JUNHO':
+            estação = 'PRIMAVERA'
+            break
+        case 'JULHO': case 'AGOSTO': case 'SETEMBRO':
+            estação = 'VERÃO'
+            break
+        case 'OUTUBRO': case 'NOVEMBRO': case 'DEZEMBRO':
+            estação = 'OUTONO'
+            break
+        default:
+            estação = 'INDEFINIDA'
+            break
+    }
+    saída.innerHTML = `<p>No mês de <mark>${mês}</mark>, estamos na estação <mark><strong>${estação}</strong></mark>.</p>`
+}
+
+// Sugestão de melhoria: refaça esse programa para que ele aceite tanto o mês por extenso quanto o número do mês.
+        */
+    </script>
+</body>
+</html>

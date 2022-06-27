@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Múltiplas ações</title>
+</head>
+<body>
+    <h1>Múltiplas ações</h1>
+
+    <button onclick="operacao()">Clique para Iniciar</button>
+
+    <div id="res">Clique no botão acima para começar.</div>
+
+
+
+    <script>
+        function operacao() {
+            var valor1 = Number(prompt('Primeiro valor:'))
+            var valor2 = Number(prompt('Segundo valor:'))
+            var resultadoConta = Number(prompt(`Valores informados: ${valor1} e ${valor2}            
+O que vamos fazer?
+[1] Somar
+[2] Subtrair
+[3] Multiplicar
+[4] Dividir`))
+
+
+            var res = document.getElementById('res')
+            var resultado
+                if (resultadoConta == 1) {
+                    resultado = valor1 + valor2
+                    res.innerHTML = `<h1>Calculando...</h1>`
+                    res.innerHTML += `${valor1} + ${valor2} = ${resultado}`
+                }else if(resultadoConta == 2){
+                    resultado = valor1 - valor2
+                    res.innerHTML = `<h1>Calculando...</h1>`
+                    res.innerHTML += `${valor1} - ${valor2} = ${resultado}`
+                }else if(resultadoConta == 3){
+                    resultado = valor1 * valor2
+                    res.innerHTML = `<h1>Calculando...</h1>`
+                    res.innerHTML += `${valor1} * ${valor2} = ${resultado}`
+                }else if(resultadoConta == 4){
+                    resultado = valor1 / valor2
+                    res.innerHTML = `<h1>Calculando...</h1>`
+                    res.innerHTML += `${valor1} / ${valor2} = ${resultado}`
+                }else {
+                    resultado = 'OPÇÃO INVÁLIDA!'
+                    res.innerHTML = `<h1>Calculando...</h1>`
+                    res.innerHTML += `${resultado} Você digitou ${valor1} e ${valor2}, mas não sei o que fazer com eles.`
+                }            
+        }
+        </script>
+</body>
+</html>
+<!-- switch(resultadoConta) {
+    case 1:
+        return resultado = valor1 + valor2
+        break
+    case 2:
+        return resultado =  valor1 - valor2
+        break
+    case 3:
+        return resultado =  valor1 * valor2
+        break
+    case 4:
+        return resultado =  valor1 / valor2
+        break       
+} -->

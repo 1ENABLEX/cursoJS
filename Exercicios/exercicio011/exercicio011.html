@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeros com JS</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h1>Média do aluno v2.0</h1>
+    <button onclick="media()">Calcular média</button>
+    <section id="res">
+        <div >O resultado vai aparecer aqui...</div>
+    </section>
+    <script>
+        function media() {
+            var nome =  prompt('Qual é o nome do aluno?') // armazena nome do aluno
+            var nota1 = Number(prompt(`Qual foi a primeira nota de ${nome}?`)) // armazena nota aluno 
+            var nota2 = Number(prompt(`Além de ${nota1}, qual foi a outra nota de ${nome}?`)) // armazena nota aluno
+            med = (nota1 + nota2) / 2 // executa o calculo entre a nota1 + nota2 e divide por 2
+            
+
+            var msg // variavel vazia para armazenar depois
+            if (med >= 5) { // se a media for maior ou igual a 5
+                msg = 'Meus parabéns!'
+            } else { // se não
+                msg = 'Estude um pouco mais!'
+            }
+            // o If/Else é uma estrutura de condição
+
+            let resposta = document.getElementById('res') // acessa o documento do ID res
+            resposta.innerHTML = `<p>Calculando a média final de <mark>${nome}</mark>.</p>` // imprimem na tela 
+            resposta.innerHTML += `<p>As notas obtidas foram <mark>${nota1} e ${nota2}</mark>.</p>` 
+            resposta.innerHTML += `<p>A média final será <mark>${med}</mark>.</p>`
+            resposta.innerHTML += `<p>A mensagem que temos é: <strong style='color:red;'>${msg}</strong></p>`
+        }
+    </script>
+</body>
+</html>

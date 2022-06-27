@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média aluno v1.0</title>
+    <style>
+        .mark{
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Média do aluno v1.0</h1>
+    <button id="media" onclick="executar()">Calcular média</button>
+    <p id="res">O resultado vem aqui...</p>
+    <p id="obtidas"></p>
+    <p id="mediaFinal"></p>
+    <script>
+        function executar() {
+            var nome = prompt('Qual é o nome do aluno?') // Recebe Nome
+            var nota1 = Number(prompt(`Qual foi a primeira nota de ${nome}?`)) // Recebe Nota 1
+            var nota2 = Number(prompt(`Além de ${nota1}, qual foi a outra nota de ${nome}?`))   // Recebe Nota 2
+            var mediaRes = Number(nota1 + nota2) / 2    // Recebe nota1 + nota2 dividido por 2
+            var res = document.getElementById('res') // Acessa o ID RES
+            var obtidas = document.getElementById('obtidas')    // Acessa o ID obtidas
+            var mediaFinal = document.getElementById('mediaFinal')  // Acessa o ID media FINAL
+            res.innerHTML = `Calculando a média final de <mark>${nome}</mark>` // Escrevera na variavel RES
+            obtidas.innerHTML = `As notas obtidas foram <mark>${nota1} e ${nota2}</mark>`   // Escrevera na variavel OBTIDAS
+            mediaFinal.innerHTML = `A média final será <mark>${mediaRes}</mark>`    // Escrevera na variavel mediaFinal
+        }
+    </script>
+</body>
+</html>
